@@ -568,7 +568,7 @@ Visualizing the results through the MGCI Results Drawer
 
 SEPAL-SDG 15.4.2 :sub:`beta` also allows users to explore the results of the computation visually. The module generates dashboards and maps that show the changes that have occurred in the area of interest. To generate these, do the following;
 
-**1.	Click on the MGCI results drawer** in the left panel as seen below:
+**1.Click on the MGCI results drawer** in the left panel as seen below:
 
 .. image:: ../_static/sepal/results_drawer.PNG
    :align: center
