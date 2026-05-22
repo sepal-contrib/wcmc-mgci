@@ -180,7 +180,7 @@ Several global standards of land cover classifications have been developed by in
 
 Land cover maps developed by relevant national authorities will generally provide the most appropriate data source to compute this indicator. However, in certain cases, such data may not be available. In those cases, various regional or global products provide a viable alternative.
 
-The global default sources of land cover data for this indicator are the CORINE Land Cover (CLC) product for all countries and territories covered by this dataset, the Global 2000-2020 Land Cover and Land Use Change Dataset (GLCLUC2020) (Potapov et al. 2022) for countries and territories not covered by CORINE, and the European Space Agency Climate Change Initiative (ESA-CCI) Land Cover product (ESA, 2017). 
+The global default sources of land cover data for this indicator are the CORINE Land Cover (CLC) product for all countries and territories covered by this dataset, the Global 2000-2020 Land Cover and Land Use Change Dataset (GLCLUC2020) (Potapov et al. 2022) for countries and territories not covered by CORINE, and the European Space Agency Climate Change Initiative (ESA-CCI) Land Cover product (ESA, 2017) for small island countries and territories not covered by any of the above products. 
 
 
 Area calculation: Planimetric area vs Real surface area 
