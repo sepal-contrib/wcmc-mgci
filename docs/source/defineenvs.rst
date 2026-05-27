@@ -126,20 +126,12 @@ this indicator, these land cover maps should:
    each epoch of the data.
 
 Where existing national or regional land cover products do not meet the
-requirements described above, the global default dataset for this
+requirements described above, the global default datasets for this
 indicator should be used. However, given unique national context and
 degradation processes, it may be advantageous for a country to develop
 their own land cover classification, using remote sensing imagery.
 
-The default global dataset is the 300m global landcover product produced by the European Space
-Agency (ESA) Climate Change Initiative (CCI) can be used if no
-appropriate National level dataset is available. This LULC dataset can
-be downloaded from
-https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-land-cover?tab=overview.4
-
-For the Global ESA CCI dataset users must register to download the
-required dataset and accept terms and conditions before they are
-directed to download the data.
+The default sources of land cover data for this indicator are the CORINE Land Cover (CLC) product for all countries and territories covered by this dataset, the Global 2000-2020 Land Cover and Land Use Change Dataset (GLCLUC2020) (Potapov et al. 2022) for countries and territories not covered by CORINE, and the European Space Agency Climate Change Initiative (ESA-CCI) Land Cover product (ESA, 2017) for small island countries and territories not covered by any of the above products.
 
 |image33|
 
