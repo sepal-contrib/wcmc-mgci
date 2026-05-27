@@ -15,7 +15,7 @@ Where:
 - **Mountain Green Cover Area** :sub:`n` = Sum of areas (in km :sup:`2`) covered by (1) tree-covered areas, (2) croplands,(3) grasslands, (4) shrub-covered areas and (5) shrubs and/or herbaceous vegetation, aquatic or regularly flooded classes in the reporting period *n*
 - **Total mountain area** = Total area of mountains (in km :sup:`2`). In both the numerator and denominator, mountain area is defined according to UNEP-WCMC (2002).
 
-**Sub-indicator 15.4.2b**, Proportion of degraded mountain land, is designed to monitor the extent of degraded mountain land is based on land cover change of a given country and for given reporting year. Similarly to sub-indicator ‘’trends in land cover” under SDG Indicator 15.3.1 (Sims et al. 2021), mountain ecosystem degradation and recovery is assessed based on the definition of land cover type transitions that constitute degradation, as either improving, stable or degraded. The definition of degradation adopted for the computation of this indicator is the one established by the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES) [1]_.
+**Sub-indicator 15.4.2b**, Proportion of degraded mountain land, is designed to monitor the extent of degraded mountain land, based on land cover change of a given country and for a given reporting year. Similarly to sub-indicator ‘’trends in land cover” under SDG Indicator 15.3.1 (Sims et al. 2021), mountain ecosystem degradation and recovery is assessed based on the definition of land cover type transitions that constitute degradation, as either improving, stable or degraded. The definition of degradation adopted for the computation of this indicator is the one established by the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES) [1]_.
 
 .. math::
 
@@ -180,7 +180,7 @@ Several global standards of land cover classifications have been developed by in
 
 Land cover maps developed by relevant national authorities will generally provide the most appropriate data source to compute this indicator. However, in certain cases, such data may not be available. In those cases, various regional or global products provide a viable alternative.
 
-The global default source of land cover data for this indicator is the European Space Agency Climate Change Initiative (ESA-CCI) Land Cover product (ESA, 2017). The ESA-CCI product consists of a series of annual Land Cover maps at 300 m resolution, providing 22 land cover classes based on 300m MERIS, 1km SPOT – VEGETATION, 1km PROBA –V and 1km AVHRR. The ESA CCI adheres to the Cover Classification System of the United Nations Food and Agriculture Organization (UN FAO) (Santoro et al. 2015). Annual updates are currently available from 1992 to 2020. Additional years will be made available by the European Space Agency.
+The global default sources of land cover data for this indicator are the CORINE Land Cover (CLC) product for all countries and territories covered by this dataset, the Global 2000-2020 Land Cover and Land Use Change Dataset (GLCLUC2020) (Potapov et al. 2022) for countries and territories not covered by CORINE, and the European Space Agency Climate Change Initiative (ESA-CCI) Land Cover product (ESA, 2017) for small island countries and territories not covered by any of the above products. 
 
 
 Area calculation: Planimetric area vs Real surface area 

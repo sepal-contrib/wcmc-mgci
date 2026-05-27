@@ -171,7 +171,7 @@ Next some QGIS settings will be changed to ensure QGIS knows where to find the R
 
 - Once done click **OK** to close the setting window and return to the main QGIS interface.
    
-- On the righ-hand side of QGIS you should see the processing Toolbox. (If it is not visible, from the main menu select **View>>panels>>processing toolbox**).
+- On the right-hand side of QGIS you should see the processing Toolbox. (If it is not visible, from the main menu select **View>>panels>>processing toolbox**).
 
 - You should also see that the R script button has appeared on the processing toolbox menu and R scripts tab visible in the toolbox.
 
@@ -271,16 +271,16 @@ Now that the country boundary is in the chosen projection, we can generate the l
 Step A1 Prepare and Reclassify LULC Dataset into UN-SEEA Classes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The next step is to reclassify your chosen landcover dataset into the UN-SEEA classification. Preferably a National landcover raster dataset should be used.
-To demonstrate the steps for processing a raster landcover dataset we will use the Global ESA CCI landcover dataset.
+The next step is to reclassify your chosen land cover dataset into the UN-SEEA classification. Preferably a National landcover raster dataset should be used.
+To demonstrate the steps for processing a raster land cover dataset we will use the Global ESA CCI landcover dataset.
 
-If the landcover dataset is a regional or global extent it will need projecting and clipping to the AOI. In this example we are using a global dataset so we will need to clip the raster and save it in the equal area projection. Next, we reclassify the landcover map into the 10 UN-SEEA classes defined for SDG Indicator 15.4.2. QGIS provides several tools for reclassification. The easiest one to use in this instance is the r.reclass tool in the GRASS toolset as it allows the upload of a simple crosswalk text file containing the input LULC types on the left and the UN-SEEA reclass values on the right. Create a text file to crosswalk landcover types from the ESA CCI or National landcover dataset to the 10 UN-SEEA landcover classes.
+If the land cover dataset is a regional or global extent it will need projecting and clipping to the AOI. In this example we are using a global dataset so we will need to clip the raster and save it in the equal area projection. Next, we reclassify the land cover map into the 10 UN-SEEA classes defined for SDG Indicator 15.4.2. QGIS provides several tools for reclassification. The easiest one to use in this instance is the r.reclass tool in the GRASS toolset as it allows the upload of a simple crosswalk text file containing the input LULC types on the left and the UN-SEEA reclass values on the right. Create a text file to crosswalk land cover types from the ESA CCI or National land cover dataset to the 10 UN-SEEA land cover classes.
 
 |crosswalk_textfile|
 
 First we will run for the year 2000.
 
-In the Processing Toolbox, under Models, click on model **A1 Prepare and reclassify landcover dataset into UN-SEEA classes**.
+In the Processing Toolbox, under Models, click on model **A1 Prepare and reclassify land cover dataset into UN-SEEA classes**.
 
 |SubA_A1_tool_interface|
 
@@ -290,7 +290,7 @@ Follow the instructions in the right-hand panel of the tool interface (see scree
 
 **Click Run.**
 
-You should now see the unique landcover classes present within the AOI for the country.
+You should now see the unique land cover classes present within the AOI for the country.
 
 You can run subsequent years by then clicking  **Change parameters** and change the LULC to e.g. the 2015 dataset and year to 2015. **Click Run.** Repeat this until you have run all the years you wish to run.
 
@@ -309,7 +309,7 @@ The development of mountain map consists in clipping and reprojecting the SDG 15
 
 First we will run for the year 2000.
 
-In the Processing Toolbox, under Models, click on model **A2 Prepare mountains and combine with landcover**.
+In the Processing Toolbox, under Models, click on model **A2 Prepare mountains and combine with land cover**.
 
 |SubA_A2_tool_interface|
 
@@ -430,7 +430,7 @@ This output is the main statistics table from the analysis, from which other sum
 Step A6 Formatting to reporting tables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This statistics table contains the estimates of 15.4.2 sub-indicator a, disaggregated by landcover type. We will remove unwanted fields and calculate the Mountain Green Cover Index estimates. The MGCI is calculated by diving the area of green cover the total area of each bioclimatic belt and the total mountain area and multiplying it by 100.
+This statistics table contains the estimates of 15.4.2 sub-indicator a, disaggregated by land cover type. We will remove unwanted fields and calculate the Mountain Green Cover Index estimates. The MGCI is calculated by diving the area of green cover the total area of each bioclimatic belt and the total mountain area and multiplying it by 100.
 
 In the Processing Toolbox, under Models, click on model **A6 Formatting to Reporting Tables**.
 
@@ -453,7 +453,7 @@ If you had landcover for all the reporting years and have run these steps for al
 Step A7 Interpolation of reporting tables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This step is an interpolation step for countries who do not have the exact landcover years for their reporting. You will need to have run steps A1 to A6 for the closest years before and after the missing reporting year before you can run this tool. The tool will need to be run three times for each missing reporting year i.e. on the formatted reporting tables (Table1_ER_MTN_TOTL, Table2_ER_MTN_GRNCOV and Table3_ER_MTN_GRNCVI) located in your ..\SDG15_4_2_beta\output_tables folder.
+This step is an interpolation step for countries who do not have the exact land cover years for their reporting. You will need to have run steps A1 to A6 for the closest years before and after the missing reporting year before you can run this tool. The tool will need to be run three times for each missing reporting year i.e. on the formatted reporting tables (Table1_ER_MTN_TOTL, Table2_ER_MTN_GRNCOV and Table3_ER_MTN_GRNCVI) located in your ..\SDG15_4_2_beta\output_tables folder.
 
 In the Processing Toolbox, under Models, click on model **A7 Interpolation for missing reporting years**.
 
@@ -478,9 +478,9 @@ Instructions to calculate Sub-indicator 15.4.2b in QGIS using the custom models
 
 This section of the tutorial explains in detail how to calculate value estimates for sub-indicator 15.4.2b in QGIS, continuing to use Colombia as a case study. Sub-Indicator 15.4.2b is designed to monitor the extent of degraded mountain land as a result of landcover change of a given country and for given reporting year.
 
-As a reminder, in accordance with the SDG indicator’s metadata countries are required to compute estimates for Sub-Indicator 15.4.2b for a baseline for approximately 2000-2015, and subsequently every three years (2018, 2021, 2024, 2027 and 2030). Therefore, for the example in this tutorial we will use the ESA-CCI landcover products for 2000, 2015 (for the baseline) and 2018 (for the reporting year). ESA-CCI landcover data are not yet available beyond 2021 so we have therefore not yet been able to calculate subsequent years in this example.
+As a reminder, in accordance with the SDG indicator’s metadata countries are required to compute estimates for Sub-Indicator 15.4.2b for a baseline for approximately 2000-2015, and subsequently every three years (2018, 2021, 2024, 2027 and 2030). Therefore, for the example in this tutorial we will use the ESA-CCI landcover products for 2000, 2015 (for the baseline) and 2018 (for the reporting year). ESA-CCI land cover data are not yet available beyond 2021 so we have therefore not yet been able to calculate subsequent years in this example.
 
-This section of the tutorial assumes that the user has already calculated sub-indicator 15.4.2a and has therefore already downloaded and translated the landcover datasets to UN-SEEA classes for the baseline and reporting years as presented in the figure below.
+This section of the tutorial assumes that the user has already calculated sub-indicator 15.4.2a and has therefore already downloaded and translated the land cover datasets to UN-SEEA classes for the baseline and reporting years as presented in the figure below.
 
 **Landcover reclassified into UN-SEEA classes for 2000, 2015 and 2018**
 
@@ -490,14 +490,14 @@ This section of the tutorial assumes that the user has already calculated sub-in
 
 SGD Indicator 15.4.2b requires us to identify change between LC classes in each reporting period, therefore the first requirement for sub-indicator 15.4.2b is to develop a transition matrix that specifies the land cover changes occurring in a given land unit (pixel) as being either degradation, improvement or neutral transitions. The definition of degradation adopted for the computation of this indicator is the one established by the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES).
 
-Countries may choose to either calculate degradation using the default land cover legend for this indicator and default transition matrix provided or from a native or simplified legend of a national landcover dataset if they have the advantage of better representing degradation transitions compared to the broader default transitions.
+Countries may choose to either calculate degradation using the default land cover legend for this indicator and default transition matrix provided or from a native or simplified legend of a national land cover dataset if they have the advantage of better representing degradation transitions compared to the broader default transitions.
 
-In this tutorial the default method is described using the default legend and transition matrix, while Annex 2 outlines the additional/alternative steps required to generate a transitions matrix using a nationally adapted land cover legend. In both cases the output results in the same 3 classes (stable, degradation and improving) and both needed to be disaggregated and reported by both landcover transition and bioclimatic belt.
+In this tutorial the default method is described using the default legend and transition matrix, while Annex 2 outlines the additional/alternative steps required to generate a transitions matrix using a nationally adapted land cover legend. In both cases the output results in the same 3 classes (stable, degradation and improving) and both needed to be disaggregated and reported by both land cover transition and bioclimatic belt.
 
-Step B1 Combine landcover datasets
+Step B1 Combine land cover datasets
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-First, we will generate a single raster containing a value to represent both year 1 landcover and year 2 landcover. We will demonstrate using the default method using the UN-SEEA reclassified landcover rasters in equal area projection that were previously reclassified for the computation of sub-indicator a. As indicated above, users can choose to use the rasters projected to equal area projection containing the full or a simplified national landcover legend if there is a preference/advantage of calculating landcover transitions compared to using the default legend and transition matrix. The processing is the same regardless which method is chosen.
+First, we will generate a single raster containing a value to represent both year 1 land cover and year 2 land cover. We will demonstrate using the default method using the UN-SEEA reclassified landcover rasters in equal area projection that were previously reclassified for the computation of sub-indicator a. As indicated above, users can choose to use the rasters projected to equal area projection containing the full or a simplified national land cover legend if there is a preference/advantage of calculating land cover transitions compared to using the default legend and transition matrix. The processing is the same regardless which method is chosen.
 
 In this example we will use the UN-SEEA reclassified landcover datasets for 2000 and 2015 for the baseline and UN-SEEA classified landcover 2015 to 2018 rasters for the 2018 reporting year. As each dataset has the same landcover values (values 1-10 for UN-SEEA classification) we need to change the values in one of the years to be able to distinguish between classes in year1 and year2. We will multiply year1 landcover classes by 1000 before summing the datasets together. So, for example values for year 1 when using the default legend will range from 1000 – 10000 and values for year 2 will remain 1 -10 and the resultant output will have values ranging from a minimum of 1001 to a maximum of 10010 (depending on which landcover transitions are present).
 
@@ -505,7 +505,7 @@ In the Processing Toolbox, under Models, click on model **B1 Combine landcover d
 
 |SubB_B1_tool_interface|
 
-We will calculate the baseline period first i.e., using 2000 landcover (year 1) and 2015 landcover (year 2).
+We will calculate the baseline period first i.e., using 2000 land cover (year 1) and 2015 land cover (year 2).
 
 **Input parameters**
 
@@ -536,9 +536,9 @@ You can either use the default transitions matrix or generate a national one. Th
 
 Despite the clarity of this format transitions matrix, the reclassification tools in QGIS require a very specific format for the reclassification table. We therefore need to add an additional field and calculate it to be in the required QGIS syntax. This field will then be saved into a new CSV file which can be used by the QGIS geoprocessing tool.
 
-Note that we are taking the Landcover code for year 1 and multiplying it by 1000 (as described above) and summing it with the landcover code for year 2 before combining it with the rest of the QGIS syntax.
+Note that we are taking the Landcover code for year 1 and multiplying it by 1000 (as described above) and summing it with the land cover code for year 2 before combining it with the rest of the QGIS syntax.
 
-If are using a national land cover transition matrix you can prepare a transitions table in the same format as the default transitions table in Excel or you can generate a csv file from the unique combinations for the landcover types using the combined landcover dataset for the two years. We illustrate this below (although we are using the default UN-SEEA classes for illustration purposes only).
+If are using a national land cover transition matrix you can prepare a transitions table in the same format as the default transitions table in Excel or you can generate a csv file from the unique combinations for the land cover types using the combined land cover dataset for the two years. We illustrate this below (the default UN-SEEA classes have been used for illustration purposes only).
 
 In the Processing Toolbox, under Models, click on model **B2 Generate Transition Matrix**.
 
@@ -562,7 +562,7 @@ The resultant table should look like this:
 
 |SubB_B2_tool_model|
 
-Step B3 Reclassify landcover transitions to impacts
+Step B3 Reclassify land cover transitions to impacts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The next step is to reclassify the outputs from the combined landcover datasets for year 1 and year 2, first for the baseline period (2000 to 2015) and then for the reporting period (e.g., 2018). We will use the transitions matrix generated in the previous steps. In this example we use the default transitions matrix, but the steps are the same if a national transitions matrix is being used.
@@ -571,7 +571,7 @@ After calculating the baseline reporting period, for assessing the area of degra
 
 |adjusting_impact_matrix|
 
-This basically means that area degraded for the reporting period 2018 is calculated by summing : (i) new areas degraded in 2016-2018 period and (ii) areas identified as degraded in the baseline period that remain degraded. If we were to do the same for the next reporting year (2021), we would calculate the degraded land for the 2016 -2021 period, and follow exactly the same approach. Please let me know if this is not clear.
+This basically means that area degraded for the reporting period 2018 is calculated by summing : (i) new areas degraded in 2016-2018 period and (ii) areas identified as degraded in the baseline period that remain degraded. If we were to do the same for the next reporting year (2021), we would calculate the degraded land for the 2016 -2021 period, and follow exactly the same approach.
 
 In the Processing Toolbox, under Models, click on model **B3 Reclassify landcover transitions to impacts**.
 
@@ -601,21 +601,21 @@ The resultant map should show should show the three impact categories:
 
 |SubB_B3_tool_model|
 
-Step B4 Combine Bioclimatic belts, landcover transitions and impact layers
+Step B4 Combine Bioclimatic belts, land cover transitions and impact layers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-We now have all the layers we need for generating statistics. To make it easier we will again sum the layers together using different factors to change the values in some of the datasets. We have the following datasets which we need to combine to generate the proportion of degraded mountain area disaggregated by landcover transitions, impact status and bioclimatic belt:
+We now have all the layers we need for generating statistics. To make it easier we will again sum the layers together using different factors to change the values in some of the datasets. We have the following datasets which we need to combine to generate the proportion of degraded mountain area disaggregated by land cover transitions, impact status and bioclimatic belt:
 
-- Landcover transitions (which in our case using have values 1001-10010 where landcover for year 1 has already been multiplied by 1000 and summed with year 2 values)
+- Land cover transitions (which in our case using have values 1001-10010 where land cover for year 1 has already been multiplied by 1000 and summed with year 2 values)
 We will leave these landcover transitions dataset values as they are.
 
 - Bioclimatic belts (which have values 1-4 representing the 4 bioclimatic belts)
 We will multiply the bioclimatic belts by 100,000.
 
-- Landcover transition impact status (values -1, 0 and 1)
+- Land cover transition impact status (values -1, 0 and 1)
 We will change the impact status by adding 2 to each of the values and multiplying by 1,000,000 thus changing values -1 to 1,000,000 (degradation), 0 to 2,000,000 (stable) and 1 to 3,000,000 (improving)
 
-In the Processing Toolbox, under Models, click on model **B4 Combine Bioclimatic Belts, landcover transitions and impact layers**.
+In the Processing Toolbox, under Models, click on model **B4 Combine Bioclimatic Belts, land cover transitions and impact layers**.
 
 |SubB_B4_tool_interface|
 
